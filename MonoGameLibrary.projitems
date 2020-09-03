@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>6efba8a9-a407-4029-bdd0-651d22a87386</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MonoGameLibrary</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CollisionData\Collisions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CollisionData\QuadTreeData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CollisionData\QuadTreeNode.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CollisionData\SeparationAxisTheorem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Custom Classes\Button.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Custom Classes\PlayerController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Custom Classes\Shapes2D\Circle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Custom Classes\Shapes2D\Line.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SceneManagement\Scene.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SceneManagement\SceneSwitcher.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SceneManagement\Service\GameSceneLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\ImageUI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\IUI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\UI.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\UIManager.cs" />
+    <Compile Include="..\MonoGameLibrary\UI\TextUI.cs" />
+    <Compile Include="..\MonoGameLibrary\SceneManagement\Service\ParallaxSceneLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SceneManagement\Service\SceneLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Spawn\Spawner.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Spawn\TimedAreaSpawn.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Spawn\TimedSpawn.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\Event.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\EventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Events\EventData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Game1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Network\ClientInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Network\GameClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Network\GameNetwork.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Network\GameServer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Network\Serializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Particles\Particle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Particles\ParticleManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Particles\ParticleSystem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\GamePause.cs" />
+    <Compile Include="..\MonoGameLibrary\SceneManagement\Service\SoloParallaxSceneLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sprite\Service\CelAnimationManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sprite\DrawableAnimatableSprite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sprite\DrawableSprite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sprite\Sprite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sprite\SpriteBatchExtensionMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)State\GameState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)State\Service\GameStateManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\CMP.cs" />
+    <Compile Include="..\MonoGameLibrary\Util\GameCompUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\FPS.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\Service\GameConsole.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\Service\InputHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\MathUtil\MatrixUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\MathUtil\TransformUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\MathUtil\VectorUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\RandomManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\Service\RandomQueue.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\Timer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Content\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Sprite\Service\" />
+    <Folder Include="$(MSBuildThisFileDirectory)State\Service\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Util\Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
+    <None Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
+  </ItemGroup>
+</Project>
