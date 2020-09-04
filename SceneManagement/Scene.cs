@@ -17,7 +17,7 @@ namespace MonoGameLibrary.SceneManagement
         /// </summary>
         void LoadContent();
         /// <summary>
-        /// Content to free or disable temporary
+        /// Content to temporary free or disable 
         /// </summary>
         void UnLoadContent();
         /// <summary>

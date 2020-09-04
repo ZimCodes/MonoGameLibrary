@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MonoGameLibrary.SceneManagement.Service
 {
-    public interface ISceneSwitchLoad
+    public interface ISceneSwitchLoad:IUpdateable,IDrawable
     {
         /// <summary>
         /// Set the next Scene to load

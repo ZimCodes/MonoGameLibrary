@@ -70,7 +70,7 @@ namespace MonoGameLibrary.Sprite
         public Sprite(Game game)
             : base(game)
         {
-            this.Scale = 1;                 //default scale is 1
+            this.Scale = 1;       //default scale is 1
 
             //top left origin
             this.Origin = Vector2.Zero;
@@ -78,6 +78,7 @@ namespace MonoGameLibrary.Sprite
             rectangle = new Rectangle();
 
             this.spriteColor = Color.White;
+            this.DrawOrder = 1; //set the draw order
         }
 
         /// <summary>

@@ -50,7 +50,7 @@ namespace MonoGameLibrary.Util
             graphics.ApplyChanges();
 
             
-            console = GameCompUtil.GetService<GameConsole, IGameConsole>(game);
+            console = GameUtil.GetService<GameConsole, IGameConsole>(game);
 
         }
 

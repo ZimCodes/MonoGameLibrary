@@ -25,7 +25,7 @@ namespace MonoGameLibrary.State
             : base(game)
         {
             GameManager = (IGameStateManager)game.Services.GetService(typeof(IGameStateManager));
-            Input = GameCompUtil.GetService<InputHandler, IInputHandler>(game); 
+            Input = GameUtil.GetService<InputHandler, IInputHandler>(game); 
         }
 
         protected override void LoadContent()

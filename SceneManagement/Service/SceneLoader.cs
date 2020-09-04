@@ -16,22 +16,7 @@ namespace MonoGameLibrary.SceneManagement.Service
         /// </summary>
         /// <param name="_texture">The texture name to be drawn</param>
         void ReLoadContent(string _texture);
-        /// <summary>
-        /// Disables Update()
-        /// </summary>
-        void Pause();
-        /// <summary>
-        /// Enables Update() 
-        /// </summary>
-        void Play();
-        /// <summary>
-        /// Prevent Update() and Draw() methods from being called
-        /// </summary>
-        void Deactivate();
-        /// <summary>
-        /// Allow Update() and Draw() methods to be called
-        /// </summary>
-        void Activate();
+        
     }
     public class SceneLoader : DrawableGameComponent, ISceneLoader
     {
@@ -70,26 +55,6 @@ namespace MonoGameLibrary.SceneManagement.Service
         {
             this.textureName = _texture;
             this.LoadContent();
-        }
-        
-        public virtual void Pause()
-        {
-            this.Enabled = false;
-        }
-        
-        public virtual void Play()
-        {
-            this.Enabled = true;
-        }
-        
-        public virtual void Activate()
-        {
-            this.Enabled = this.Visible = true;
-        }
-        
-        public virtual void Deactivate()
-        {
-            this.Enabled = this.Visible = false;
         }
         
     }

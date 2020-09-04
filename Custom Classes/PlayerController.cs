@@ -44,7 +44,7 @@ namespace MonoGameLibrary.Custom_Classes
             this.StickDir = Vector2.Zero;
 
             //get input from game service
-            input = GameCompUtil.GetService<InputHandler, IInputHandler>(game);
+            input = GameUtil.GetService<InputHandler, IInputHandler>(game);
         }
 
         public override void Update(GameTime gameTime)

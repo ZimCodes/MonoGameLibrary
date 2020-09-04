@@ -78,7 +78,7 @@ namespace MonoGameLibrary.Util.Service
             this.gameConsoleState = GameConsoleState.Open;
 
             //InputHandler Dependency
-            input = GameCompUtil.GetService<InputHandler, IInputHandler>(game);
+            input = GameUtil.GetService<InputHandler, IInputHandler>(game);
             
             game.Services.AddService(typeof(IGameConsole), this);
         }

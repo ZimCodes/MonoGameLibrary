@@ -13,7 +13,7 @@ namespace MonoGameLibrary.UI
         SpriteBatch sb;
         public UIManager(Game game, IEnumerable<UI> uiElements):base(game)
         {
-            
+            this.DrawOrder = 2;
             uiItems = new List<UI>();
             uiItems.AddRange(uiElements);
         }

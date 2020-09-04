@@ -19,7 +19,7 @@ namespace MonoGameLibrary.Custom_Classes
         InputHandler input;
         public Button(Game game):base(game)
         {
-            input = GameCompUtil.GetService<InputHandler, IInputHandler>(game);
+            input = GameUtil.GetService<InputHandler, IInputHandler>(game);
         }
         /// <summary>
         /// Instantiate SpriteAnimation objects here

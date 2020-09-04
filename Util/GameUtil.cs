@@ -10,7 +10,7 @@ namespace MonoGameLibrary.Util
     /// <summary>
     /// Makes GameComponent related things easier!
     /// </summary>
-    static class GameCompUtil
+    static class GameUtil
     {
         
         /// <summary>

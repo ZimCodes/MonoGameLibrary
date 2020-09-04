@@ -42,7 +42,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Particles\Particle.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Particles\ParticleManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Particles\ParticleSystem.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Util\GamePause.cs" />
     <Compile Include="..\MonoGameLibrary\SceneManagement\Service\SoloParallaxSceneLoader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sprite\Service\CelAnimationManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Sprite\DrawableAnimatableSprite.cs" />
@@ -52,7 +51,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)State\GameState.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)State\Service\GameStateManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\CMP.cs" />
-    <Compile Include="..\MonoGameLibrary\Util\GameCompUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\GameUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\FPS.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\Service\GameConsole.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Util\Service\InputHandler.cs" />
@@ -65,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Content\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Audio\" />
     <Folder Include="$(MSBuildThisFileDirectory)Sprite\Service\" />
     <Folder Include="$(MSBuildThisFileDirectory)State\Service\" />
     <Folder Include="$(MSBuildThisFileDirectory)Util\Service\" />
