@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Media;
+using MonoGameLibrary.Util;
 using System;
 using System.Collections.Generic;
 using System.Security.Cryptography;
@@ -65,7 +66,7 @@ namespace MonoGameLibrary.Audio
         }
         public void shuffleSongs()
         {
-            MultiMediaPlayer.Shuffle(this.songs);
+            ListUtil.Shuffle(this.songs);
         }
     }
 }

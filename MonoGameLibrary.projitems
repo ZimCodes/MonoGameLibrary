@@ -12,6 +12,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Audio\IMediaList.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Audio\MultiMediaPlayer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Audio\SongList.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Util\ListUtil.cs" />
     <Compile Include="..\MonoGameLibrary\Audio\SFX.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CollisionData\Collisions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CollisionData\QuadTreeData.cs" />
