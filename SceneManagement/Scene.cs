@@ -19,7 +19,7 @@ namespace MonoGameLibrary.SceneManagement
         /// <summary>
         /// Content to temporary free or disable 
         /// </summary>
-        void UnLoadContent();
+        void DisableContent();
         /// <summary>
         /// Updates the scene 
         /// </summary>
@@ -55,7 +55,7 @@ namespace MonoGameLibrary.SceneManagement
         }
 
         public abstract void LoadContent();
-        public abstract void UnLoadContent();
+        public abstract void DisableContent();
         public abstract void Update(GameTime gameTime, ISceneSwitchLoad loader, SceneSwitcher switcher);
         public abstract void Draw(SpriteBatch sb);
     }

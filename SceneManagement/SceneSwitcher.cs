@@ -47,7 +47,7 @@ namespace MonoGameLibrary.SceneManagement
         /// <returns>The next Scene object in the List</returns>
         public IScene Next()
         {
-            this.scenes[this.currentIndex].UnLoadContent();
+            this.scenes[this.currentIndex].DisableContent();
             if (this.currentIndex + 1 >= this.scenes.Count)
             {
                 this.currentIndex = 0;
@@ -65,7 +65,7 @@ namespace MonoGameLibrary.SceneManagement
         /// <returns>The specified Scene</returns>
         public IScene GetScene(int _index)
         {
-            this.scenes[this.currentIndex].UnLoadContent();
+            this.scenes[this.currentIndex].DisableContent();
             this.currentIndex = _index;
             return this.scenes[_index];
         }
@@ -76,7 +76,7 @@ namespace MonoGameLibrary.SceneManagement
         /// <returns>The specified Scene</returns>
         public IScene GetScene(string _texturename)
         {
-            this.scenes[this.currentIndex].UnLoadContent();
+            this.scenes[this.currentIndex].DisableContent();
             int count = -1;
             IScene scene = this.scenes.Find((x) => { count++; return x.TextureName == _texturename; });
             this.currentIndex = count > -1 ? count : 0;
