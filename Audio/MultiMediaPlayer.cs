@@ -2,10 +2,6 @@
 using Microsoft.Xna.Framework.Media;
 using System;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography;
-using System.Text;
-using System.Windows.Forms;
 
 namespace MonoGameLibrary.Audio
 {
@@ -32,7 +28,7 @@ namespace MonoGameLibrary.Audio
         static MultiMediaPlayer()
         {
             curSongIndex = 0;
-            
+
             songList = new SongList();
         }
         /// <summary>
@@ -48,7 +44,7 @@ namespace MonoGameLibrary.Audio
         /// </summary>
         /// <param name="content">THe content manager to use in order to load the content</param>
         /// <param name="songs">Name of the songs to load into the Song list</param>
-        public static void AddToQueue(ContentManager content,IEnumerable<string> songs)
+        public static void AddToQueue(ContentManager content, IEnumerable<string> songs)
         {
             songList.Add(content, songs);
         }
@@ -92,7 +88,7 @@ namespace MonoGameLibrary.Audio
                 Resume();
             }
             MediaPlayer.Play(songList.GetMedia(curSongIndex));
-            
+
         }
         /// <summary>
         /// Plays a previous Song 
@@ -157,6 +153,6 @@ namespace MonoGameLibrary.Audio
         {
             songList.shuffleSongs();
         }
-        
+
     }
 }

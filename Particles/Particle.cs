@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 
 namespace MonoGameLibrary.Particles
 {
@@ -11,7 +7,7 @@ namespace MonoGameLibrary.Particles
         public Vector2 position;
         public Vector2 velocity;
         public Vector2 acceleration;
-       
+
         private float lifeTime;
         public float LifeTime { get { return this.lifeTime; } set { this.lifeTime = value; } }
 
@@ -40,7 +36,7 @@ namespace MonoGameLibrary.Particles
         {
             this.position = position;
             this.velocity = velocity;
-            this.acceleration= acceleration;
+            this.acceleration = acceleration;
             this.lifeTime = lifetime;
             this.scale = scale;
             this.rotationSpeed = rotationSpeed;

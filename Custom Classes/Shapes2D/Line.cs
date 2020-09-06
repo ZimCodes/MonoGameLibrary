@@ -1,9 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MonoGameLibrary.Custom_Classes.Shapes2D
 {
@@ -12,11 +8,11 @@ namespace MonoGameLibrary.Custom_Classes.Shapes2D
         public Point Start;
         public Point End;
 
-        public Line(Point start,Point end)
+        public Line(Point start, Point end)
         {
             this.Start = start;
             this.End = end;
-            
+
         }
         /// <summary>
         /// Finds the Length of a line segment
@@ -40,7 +36,7 @@ namespace MonoGameLibrary.Custom_Classes.Shapes2D
         }
         public override string ToString()
         {
-            return String.Format("Start:{0}, End: {1}",this.Start,this.End);
+            return String.Format("Start:{0}, End: {1}", this.Start, this.End);
         }
     }
 }

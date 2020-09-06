@@ -1,21 +1,19 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using Microsoft.Xna.Framework;
 
 namespace MonoGameLibrary.Util.Service
 {
 
     interface IRandQueue { }
-    
+
     public class RandomQueue : Microsoft.Xna.Framework.GameComponent, IRandQueue
     {
         static Queue<double> RQueue;
-        
 
-        public static double MemInMB { get; set;}
+
+        public static double MemInMB { get; set; }
         static uint size;
         public static uint Size
         {
@@ -25,20 +23,20 @@ namespace MonoGameLibrary.Util.Service
         static Random r, rf;
         static TimeSpan t;
         static QueueState queueState;
-        
+
         public static QueueState CurrentQueueState { get { return queueState; } }
         List<double> drand;
-        public RandomQueue(Game game): base(game)
+        public RandomQueue(Game game) : base(game)
         {
             r = new Random();
             rf = new Random();
             t = new TimeSpan(1);    //Very short time
             //default memory use
-            if(MemInMB <= 0)
+            if (MemInMB <= 0)
                 MemInMB = 4;
             size = (uint)((double)1048576 * MemInMB) / sizeof(double);
             RQueue = new Queue<double>();
-            
+
             queueState = QueueState.Emptry;
             this.FillQueue();
             game.Services.AddService(typeof(IRandQueue), this);
@@ -55,24 +53,24 @@ namespace MonoGameLibrary.Util.Service
 
         static void DoFillQueue()
         {
-                /*
-                int startCount = RQueue.Count;
-                lock (RQueue)
+            /*
+            int startCount = RQueue.Count;
+            lock (RQueue)
+            {
+                System.Threading.Tasks.Parallel.For(startCount, size, i =>
                 {
-                    System.Threading.Tasks.Parallel.For(startCount, size, i =>
-                    {
-                        RQueue.Enqueue(r.NextDouble());
-                        Thread.Sleep(t);
-                    });
-                }
-                 */
-                
-                while (RQueue.Count <= size)
-                {
-                    RQueue.Enqueue(rf.NextDouble());
-                    //Thread.Sleep(t);
-                }       
-                queueState = QueueState.Good;
+                    RQueue.Enqueue(r.NextDouble());
+                    Thread.Sleep(t);
+                });
+            }
+             */
+
+            while (RQueue.Count <= size)
+            {
+                RQueue.Enqueue(rf.NextDouble());
+                //Thread.Sleep(t);
+            }
+            queueState = QueueState.Good;
         }
 
         public double GetRandom()
@@ -90,7 +88,7 @@ namespace MonoGameLibrary.Util.Service
                 queueState = QueueState.Filling;
                 this.FillQueue();
             }
-            
+
             //return random from queue if we have one
             if (queueState != QueueState.Filling)
             {
@@ -111,7 +109,7 @@ namespace MonoGameLibrary.Util.Service
             {
                 drand.Add(this.GetRandom());
             });
-            
+
             //for (int i = 0; i < NumRandoms; i++)
             //{
             //    drand.Add(this.GetRandom());
@@ -130,12 +128,12 @@ namespace MonoGameLibrary.Util.Service
                 drand.Add(this.GetRandom(Max));
             });
             */
-            
+
             for (int i = 0; i < NumRandoms; i++)
             {
                 drand.Add(this.GetRandom(Max));
             }
-            
+
             return drand;
         }
 
@@ -144,7 +142,7 @@ namespace MonoGameLibrary.Util.Service
             return string.Format("Size in MB {0} \nCount {1}\nState {2}\nCount {3}", MemInMB, Size, queueState, RQueue.Count);
         }
 
-        public enum QueueState { Emptry, Filling, Good };   
+        public enum QueueState { Emptry, Filling, Good };
     }
 
 }
